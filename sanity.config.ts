@@ -55,4 +55,13 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  webhooks: {
+    name: 'deploy-d4tatech',
+    url: 'https://api.vercel.com/v1/integrations/deploy/prj_9MLGQMr35WB1Xy9pFZyyHJVz2QZY/FeoXq85e6e',
+    dataset: 'production',
+    filter: '{ _type == "headerSettings" || _type == "heroContent" }',
+    projection: '{ _id, _type }',
+    http: { action: 'post' },
+  },
 })
