@@ -20,6 +20,23 @@ export default defineConfig({
           .title('Contenido')
           .items([
             S.listItem()
+              .title('Header Settings')
+              .id('headerSettings')
+              .child(
+                S.document()
+                  .schemaType('headerSettings')
+                  .documentId('headerSettings')
+              ),
+            S.listItem()
+              .title('Hero / Inicio Content')
+              .id('heroContent')
+              .child(
+                S.document()
+                  .schemaType('heroContent')
+                  .documentId('heroContent')
+              ),
+            S.divider(),
+            S.listItem()
               .title('Sobre Mi')
               .id('sobreMi')
               .child(
